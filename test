@@ -1,0 +1,5 @@
+#!/bin/sh
+
+Xephyr -br -ac -noreset -screen 1280x720 :19 &
+sleep 1
+DISPLAY=:19 ./dwm
