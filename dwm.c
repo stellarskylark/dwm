@@ -1459,7 +1459,7 @@ resizebarwin(Monitor *m) {
 	unsigned int w = m->ww;
 	if (showsystray && m == systraytomon(m))
 		w -= getsystraywidth();
-	XMoveResizeWindow(dpy, m->barwin, m->wx + m->bargappx, m->by, w - m->bargappx, bh);
+	XMoveResizeWindow(dpy, m->barwin, m->wx + m->bargappx, m->by, w - 2 * (m->bargappx), bh);
 }
 
 void
